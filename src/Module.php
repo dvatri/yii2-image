@@ -7,7 +7,14 @@ use yii\base\BootstrapInterface;
 
 class Module extends \yii\base\Module
 {
-    public $versions = [];
+    public static $moduleName = 'image';
+
+    public $versions = [
+        'as-is'=>[],
+        'small'=>[200, 200],
+    ];
+
+    public $attribute = 'imageFiles';
 
     public function init()
     {
